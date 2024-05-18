@@ -16,7 +16,7 @@ run 'SIGSEGV.PC.5555555cdf75.STACK.1833310e12.CODE.128.ADDR.0.INSTR.mov____(%rax
 If you used the `fuzz-c.sh` method then your debug info will be gone, so you may want to make a debug build directly instead:
 
 ```
-zig build-exe ./fuzz.zig -O Debug -femit-bin=fuzz
+zig build-exe ./main.zig -O Debug -femit-bin=fuzz
 gdb ./fuzz
 run 'SIGSEGV.PC.5555555cdf75.STACK.1833310e12.CODE.128.ADDR.0.INSTR.mov____(%rax,%r13,8),%r15.fuzz'
 ```
